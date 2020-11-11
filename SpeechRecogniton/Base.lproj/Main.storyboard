@@ -22,44 +22,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-7D-Ot5">
-                                <rect key="frame" x="142.5" y="733" width="129" height="60"/>
+                                <rect key="frame" x="167" y="713" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.89259034950000005" green="0.27403851280000002" blue="0.42387707749999998" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="14L-Fa-LHw"/>
-                                    <constraint firstAttribute="height" constant="60" id="Ucx-Ev-ue9"/>
+                                    <constraint firstAttribute="width" constant="80" id="14L-Fa-LHw"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ucx-Ev-ue9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <state key="normal" title="Start/Stop">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5Q-Ho-1gX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq4-fk-04b">
-                                <rect key="frame" x="16" y="117" width="382" height="600"/>
-                                <color key="backgroundColor" red="0.99562693229999999" green="0.95583967189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap to Start button and speak!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xnn-7F-VZl">
+                                <rect key="frame" x="16" y="108" width="382" height="589"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fq4-fk-04b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3WE-jK-0zi"/>
                             <constraint firstItem="dSV-7D-Ot5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4hF-hF-MhS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fq4-fk-04b" secondAttribute="trailing" constant="16" id="UwL-5B-sCb"/>
+                            <constraint firstItem="dSV-7D-Ot5" firstAttribute="top" secondItem="xnn-7F-VZl" secondAttribute="bottom" constant="16" id="Rhv-lF-kqZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLM-DG-FQI" secondAttribute="bottom" constant="16" id="Wjt-Ul-LFd"/>
                             <constraint firstItem="iLM-DG-FQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZGG-H6-7Mh"/>
-                            <constraint firstItem="dSV-7D-Ot5" firstAttribute="top" secondItem="fq4-fk-04b" secondAttribute="bottom" constant="16" id="jIk-GA-SNV"/>
-                            <constraint firstItem="fq4-fk-04b" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.669643" id="rDu-bY-Dge"/>
+                            <constraint firstItem="xnn-7F-VZl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="esN-Zm-ehd"/>
+                            <constraint firstItem="xnn-7F-VZl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qXc-fd-0Ni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xnn-7F-VZl" secondAttribute="trailing" constant="16" id="u2J-Hh-ULL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLM-DG-FQI" secondAttribute="trailing" constant="16" id="vR1-7t-0FA"/>
                             <constraint firstItem="iLM-DG-FQI" firstAttribute="top" secondItem="dSV-7D-Ot5" secondAttribute="bottom" constant="32" id="yiP-0p-ncQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="detectedTextLabel" destination="fq4-fk-04b" id="Uo6-YC-FEr"/>
+                        <outlet property="detectedTextView" destination="xnn-7F-VZl" id="t6z-Ff-xR8"/>
+                        <outlet property="startButton" destination="dSV-7D-Ot5" id="atP-rw-vHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
